@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const UserRouter = require("./Routes/UserRouter");
 const AuthRouter = require("./Routes/AuthRouter");
@@ -28,6 +29,6 @@ app.use(bodyParser.json());
 app.use("/auth", AuthRouter);
 app.use("/user", UserRouter);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
 
 module.exports = app;
