@@ -1,4 +1,5 @@
-const mongodbUrl = "mongodb://localhost/schedule";
+const mongodbUrl = `${process.env.MONGODBURL}${process.env.MONGODBNAME}`;
+console.log("mongodbUrl", mongodbUrl);
 const MESSAGES = {
   ITR_SVR_ERR: "Internal Server Error",
   SUCCESS: "Success",
