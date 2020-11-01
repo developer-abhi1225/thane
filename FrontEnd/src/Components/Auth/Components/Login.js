@@ -20,13 +20,15 @@ class Login extends Component {
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.auth.loginStatus) {
-      notification.success({ message: "Login Successfull" });
-      this.props.history.push("/profile");
-    } else if (this.props.auth.loginStatus === false) {
-      notification.error({
-        message: "Something went wrong. Please try again later",
-      });
+    if (this.props.auth.loginStatus !== prevProps.auth.loginStatus) {
+      if (this.props.auth.loginStatus) {
+        notification.success({ message: "Login Successfull" });
+        this.props.history.push("/profile");
+      } else if (this.props.auth.loginStatus === false) {
+        notification.error({
+          message: this.props.auth.loginMessage,
+        });
+      }
     }
   }
 

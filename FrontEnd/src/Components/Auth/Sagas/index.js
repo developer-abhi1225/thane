@@ -6,7 +6,7 @@ import isEmpty from "lodash/isEmpty";
 function* workerUserLogin(action) {
   try {
     const response = yield call(getUser, action.payload);
-    console.log("response is", response);
+    console.log("response", response);
     if (response.data.status === 200 && !isEmpty(response.data.data)) {
       yield put({
         type: actionTypes.LOGIN_SUCCESS,
@@ -15,7 +15,7 @@ function* workerUserLogin(action) {
     } else {
       yield put({
         type: actionTypes.LOGIN_FAIL,
-        payload: {},
+        payload: response.data.message,
       });
     }
   } catch (err) {

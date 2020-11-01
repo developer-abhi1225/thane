@@ -17,8 +17,11 @@ const loginSuccess = (state, action) => {
   };
 };
 const loginFail = (state, action) => {
+  console.log("action", action);
   return {
     ...state,
+    loginMessage: action.payload,
+    loginStatus: false,
     loading: false,
   };
 };

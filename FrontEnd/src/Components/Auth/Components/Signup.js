@@ -102,6 +102,14 @@ class Signup extends Component {
                           required: true,
                           message: "Please enter first name.",
                         },
+                        {
+                          min: 3,
+                          message: "Mininum 3 characters required.",
+                        },
+                        {
+                          max: 15,
+                          message: "Maximum 15 characters allowed.",
+                        },
                       ],
                     })(<Input prefix={<UserOutlined />} />)}
                   </Form.Item>
@@ -113,6 +121,14 @@ class Signup extends Component {
                         {
                           required: true,
                           message: "Please enter last name.",
+                        },
+                        {
+                          min: 3,
+                          message: "Mininum 3 characters required.",
+                        },
+                        {
+                          max: 15,
+                          message: "Maximum 15 characters allowed.",
                         },
                       ],
                     })(<Input prefix={<UserOutlined />} />)}
@@ -140,6 +156,14 @@ class Signup extends Component {
                         {
                           required: true,
                           message: "Please enter phone number.",
+                        },
+                        {
+                          min: 10,
+                          message: "Only 10 digits allowed.",
+                        },
+                        {
+                          max: 10,
+                          message: "Only 10 digits allowed.",
                         },
                       ],
                     })(<Input type={"number"} prefix={<MobileOutlined />} />)}
