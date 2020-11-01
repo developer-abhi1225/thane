@@ -1,0 +1,42 @@
+.login-container {
+  height: 100vh;
+  background: url("../../Assets/login.jpg") !important;
+}
+.login-container .ant-form-item {
+  margin: 0 !important;
+}
+
+.login-container .ant-form-item-label {
+  font-weight: 500;
+}
+
+.login-container .has-error .ant-form-item-children input {
+  background: rgba(245, 34, 45, 0.1);
+}
+
+.login {
+  margin-top: 10vh !important;
+}
+
+.login-container .login .login__header {
+  align-items: center;
+  height: 50px !important;
+}
+
+.login-container .login .login__header .header__logo {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.login-container .login .login__header .header__signup {
+  font-weight: 300 !important;
+}
+
+.login-container .login .login__form .form__signin {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.login-container .login .login__form .form__signin .signin__button {
+  width: 100%;
+}
